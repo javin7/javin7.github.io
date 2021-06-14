@@ -117,4 +117,4 @@ function updateTime() {
   }
   document.getElementById('time_span').innerHTML = t_str;
 }
-setInterval(updateTime, 1000);
+setInterval(updateTime, 100);
