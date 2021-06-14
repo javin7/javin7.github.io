@@ -15,6 +15,7 @@
 	@media only screen {}
 	</style>
 
+
 	<body>
 		<canvas id="canvas"></canvas>
 			<div id="footer">
@@ -126,6 +127,12 @@
 				</script>
 				<p class="noselect" style="font-size:30px"><a>JAVIN LIU</a></p>
 				<p style="font-size:15px"><a>Javin#1305</a></p>
+				<p><span id="datetime"></span></p>
+				<script>
+					var dt = new Date();
+					document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+				</script>
+				<br>
 				<br>
 				<br>
 				<br>
