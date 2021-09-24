@@ -8,6 +8,7 @@ function updateTime(){
   var t_str = hours + ":" + minutes + " ";
   if(hours > 11){
     t_str += "PM";
+    hours -= 12;
   } else {
     t_str += "AM";
   }
