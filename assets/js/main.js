@@ -1,6 +1,9 @@
 function updateTime(){
   var currentTime = new Date()
   var hours = currentTime.getHours()
+  if(hours>12) {
+    hours-=12; 
+  }
   var minutes = currentTime.getMinutes()
   if (minutes < 10){
     minutes = "0" + minutes
@@ -10,10 +13,6 @@ function updateTime(){
     t_str += "PM";
   } else {
     t_str += "AM";
-  }
-  if(hours>12)
-  {
-    hours-=12; 
   }
   document.getElementById('time_span').innerHTML = t_str;
 }
