@@ -2,11 +2,11 @@ function updateTime(){
   var currentTime = new Date()
   var hours = currentTime.getHours()
   var minutes = currentTime.getMinutes()
-  /* if (minutes < 10){
+  if (minutes < 10){
     minutes = "0" + minutes
-  } */
+  }
   var t_str = hours + ":" + minutes + " ";
-  if(hours>12) {
+  if (hours > 12) {
     hours = hours - 12; 
   }
   if(hours > 11){
