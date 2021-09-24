@@ -8,9 +8,12 @@ function updateTime(){
   var t_str = hours + ":" + minutes + " ";
   if(hours > 11){
     t_str += "PM";
-    hours -= 12;
   } else {
     t_str += "AM";
+  }
+  if(hours>12)
+  {
+    hours-=12; 
   }
   document.getElementById('time_span').innerHTML = t_str;
 }
