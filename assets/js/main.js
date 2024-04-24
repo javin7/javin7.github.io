@@ -5,11 +5,13 @@ function updateTime(){
   if (minutes < 10){
     minutes = "0" + minutes
   }
-  var t_str = hours + ":" + minutes + " ";
+  var t_str;
   if(hours > 11){
-    t_str += "PM";
+    t_str = hours - 12 + ":" + minutes + " PM";
+    //t_str += "PM";
   } else {
-    t_str += "AM";
+    t_str = hours + ":" + minutes + " AM";
+    //t_str += "AM";
   }
   document.getElementById('time_span').innerHTML = t_str;
 }
