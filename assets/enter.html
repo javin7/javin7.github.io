@@ -24,8 +24,6 @@
   </div>
   
   <script src="js/stars.js"></script>
-
-  <!--<script>
     var canvas = document.getElementById("canvas"),
       ctx = canvas.getContext('2d');
 
@@ -132,7 +130,12 @@
 
   <script>
     document.addEventListener("click", function () {
-      location.href = "javin7.html";
+      const text = document.querySelector("#center p");
+      text.classList.add("fade-out-text");
+      setTimeout(() => {
+        location.href = "javin7.html";
+      }, 1000);
+      
     });
   </script>
 
