@@ -1,3 +1,5 @@
+
+
 function updateTime(){
   var currentTime = new Date()
   var hours = currentTime.getHours()
