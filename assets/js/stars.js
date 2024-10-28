@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var stars = [],
-    starCount = 100, // Number of stars
+    starCount = (canvas.width * canvas.height) / 1800000 * 100, // Number of stars
     mouse = { x: 0, y: 0 },
     maxDistance = 150; // Distance threshold for line connections
 
