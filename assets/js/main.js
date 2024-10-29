@@ -1,17 +1,16 @@
-function updateTime(){
-  var currentTime = new Date()
-  var hours = currentTime.getHours()
-  var minutes = currentTime.getMinutes()
-  if (minutes < 10){
-    minutes = "0" + minutes
+function updateTime() {
+  const currentTime = new Date();
+  let hours = currentTime.getHours();
+  const minutes = currentTime.getMinutes().toString().padStart(2, '0'); // Ensures two-digit minutes
+  const isPM = hours >= 12;
+
+  //Keep in 12 hour clock
+  if (hours === 0) {
+    hours = 12; 
+  } else if (hours > 12) {
+    hours -= 12; 
   }
-  var tStr;
-  if (hours == 12) {
-    tStr = hours + ":" + minutes + " PM"
-  } else if(hours > 12){
-    tStr = hours - 12 + ":" + minutes + " PM";
-  } else {
-    tStr = hours + ":" + minutes + " AM";
-  }
-  document.getElementById('time_span').innerHTML = tStr;
+
+  const tStr = `${hours}:${minutes} ${isPM ? 'PM' : 'AM'}`;
+  document.getElementById('time_span').textContent = tStr;
 }
