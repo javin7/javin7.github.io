@@ -80,13 +80,11 @@ ul li
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-
-
-.fade-in-text {
+.fade-in {
   animation: fadeIn 2s;
 }
 
-.fade-out-text {
+.fade-out {
   animation: fadeOut 1s;
 }
 

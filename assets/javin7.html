@@ -9,26 +9,27 @@
     <link rel="stylesheet" type="text/css" href="css\style.css" />
 </head>
 
-<body style="background-color:#111111;">
+<body class="fade-in" style="background-color:#111111;">
   <canvas id="canvas"></canvas>
 
     <div id="center">
-        <p class="noselect fade-in-text" style="color:#FFFFFF;">
+        <p class="noselect fade-in" style="color:#FFFFFF;">
             <a>{click to enter}</a>
         </p>
     </div>
 
     <div id="footer" style="display: none">
-        <p class="noselect fade-in-text" style="font-size:30px"><a>JAVIN LIU</a></p>
-        <p class="fade-in-text" style="font-size:15px"><a>javinliu09@gmail.com</a></p>
-        <p class="noselect fade-in-text"><span id="time_span"></span></p>
+        <p class="noselect fade-in" style="font-size:30px"><a>JAVIN LIU</a></p>
+        <p class="fade-in" style="font-size:15px"><a>javinliu09@gmail.com</a></p>
+        <p class="noselect fade-in"><span id="time_span"></span></p>
         <br><br><br>
-        <p class="fade-in-text"><a href="https://instagram.com/javinskiii/" target="_blank">instagram</a></p>
-        <p class="fade-in-text"><a href="https://steamcommunity.com/profiles/76561199105056090/" target="_blank">steam</a></p>
-        <p class="fade-in-text"><a href="https://open.spotify.com/user/javinliu09?si=0580b71d0f314e20" target="_blank">playlist</a></p>
+        <p class="fade-in"><a href="https://instagram.com/javinskiii/" target="_blank">instagram</a></p>
+        <p class="fade-in"><a id="fade-out-link" href="projects.html" target="_self">projects</a></p>
+        <p class="fade-in"><a href="https://github.com/javin7" target="_blank">github</a></p>
     </div>
-  
-  	<script src="js/main.js"></script>
+
+    <script src="js/fadeOut.js"></script>
+  	<script src="js/time.js"></script>
     <script src="js/stars.js"></script>
 
     <script>
@@ -38,14 +39,13 @@
     //Fade out landing, fade in main page
     document.addEventListener("click", function () {
       const text = document.querySelector("#center p");
-      text.classList.add("fade-out-text");
+      text.classList.add("fade-out");
       setTimeout(() => {
         document.getElementById("center").style.display = "none";
         const footer = document.getElementById("footer");
         footer.style.display = "block";
         footer.classList.add("fade-in");
-      }, 800);
-      
+      }, 300);
     });
     </script>
 
